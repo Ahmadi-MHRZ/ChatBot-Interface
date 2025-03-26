@@ -1,0 +1,10 @@
+.DS_Store
+env
+migrations/
+db.sqlite3
+/static/
+.env
+TODO.txt
+__pycache__
+.vscode
+venv/
