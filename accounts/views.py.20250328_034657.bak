@@ -42,28 +42,13 @@ def login_view(request):
         username = request.POST["username"]
         password = request.POST["password"]
         
+        
         user = authenticate(request, username=username, password=password)
         if user:
-            # Get session ID before logging in (which could regenerate it)
-            old_session_id = request.session.session_key
-            
-            # Log the user in
             login(request, user)
-            
-            # Check if there was an anonymous chat associated with this session
-            if old_session_id:
-                from chats.models import Chat
-                # Find any anonymous chats for this session
-                anonymous_chats = Chat.objects.filter(session_id=old_session_id, user__isnull=True)
-                
-                # Associate them with the newly logged-in user
-                for chat in anonymous_chats:
-                    chat.user = user
-                    chat.session_id = None  # Clear the session ID as it's now a user chat
-                    chat.save()
-            
             return HttpResponseRedirect(reverse("core:index"))
 
+        #return HttpResponseRedirect(reverse("core:login_view", kwargs={"message":"Invalid Credentials."}))
         messages.add_message(request, messages.INFO, "Invalid Credentials.")
         return HttpResponseRedirect(reverse("core:login_view"))
 
