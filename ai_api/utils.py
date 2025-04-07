@@ -43,7 +43,7 @@ def send_message_to_ai(chat_hash, message):
             model="llama3.1-8b",
             max_completion_tokens=500,
             stream=False,  # Single response instead of streaming
-            temperature=0.7
+            temperature=0.1
         )
         
         ai_response = completion.choices[0].message.content
