@@ -32,11 +32,12 @@
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
+  direction: rtl;
 }
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: 'Iranian Sans', Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
@@ -76,8 +77,10 @@ p {
 }
 
 ul, li {
-	margin: 0px;
-	list-style-type: none;
+  margin: 0px;
+  padding-right: 0;
+  list-style-type: none;
+  text-align: right;
 }
 
 
@@ -85,11 +88,13 @@ ul, li {
 input {
 	outline: none;
 	border: none;
+  text-align: right;
 }
 
 textarea {
   outline: none;
   border: none;
+  text-align: right;
 }
 
 textarea:focus, input:focus {
@@ -144,6 +149,7 @@ iframe {
   font-size: 16px;
   color: #555555;
   line-height: 1.5;
+  text-align: right;
 }
 
 .txt2 {
@@ -151,6 +157,7 @@ iframe {
   font-size: 14px;
   color: #999999;
   line-height: 1.5;
+  text-align: right;
 }
 
 .bo1 {border-bottom: 1px solid #999999;}
@@ -204,7 +211,7 @@ iframe {
   font-size: 39px;
   color: #555555;
   line-height: 1.2;
-  text-align: center;
+  text-align: right;
 }
 
 /*------------------------------------------------------------------

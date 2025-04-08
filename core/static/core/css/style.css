@@ -9,6 +9,9 @@ body {
   color: white;
   padding: 1px;
   padding-top: 2px;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Iranian Sans', Arial, sans-serif;
 }
 
 .side-nav {
@@ -109,8 +112,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .chat-inputs-area-inner {
   padding-top: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-right: 50px;
+  padding-left: 54px;
 }
 
 .fa-paper-plane {
@@ -124,7 +127,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .user-chat-box {
   padding: 20px;
-  padding-left: 150px;
+  padding-right: 150px;
+  padding-left: 20px;
   color: #ffffff;
 }
 
@@ -143,7 +147,8 @@ small {
 .gpt-chat-box {
   background-color: #404350;
   padding: 20px;
-  padding-left: 150px;
+  padding-right: 150px;
+  padding-left: 20px;
   color: #ffffff;
 }
 
@@ -151,12 +156,15 @@ small {
   width: 15%;
   margin: 0;
   padding: 0;
+  float: right;
 }
 
 .chat-txt {
   width: 85%;
   margin: 0;
   padding: 0;
+  float: right;
+  text-align: right;
 }
 
 footer {
@@ -188,15 +196,17 @@ footer {
 @media only screen and (max-width: 768px) {
   .user-chat-box {
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   .gpt-chat-box {
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   .chat-inputs-area-inner {
-    padding-left: 50px;
-    padding-right: 54px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-bottom: 30px;
   }
 }
